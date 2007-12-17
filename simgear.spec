@@ -22,7 +22,6 @@ BuildRequires:  Mesa-common-devel
 BuildRequires:  zlib-devel 
 BuildRequires:  openal-devel
 BuildRequires:  jpeg-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 # Author: Curtis Olson <curt@flightgear.org>
 
 %description
