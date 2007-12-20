@@ -1,7 +1,7 @@
 %define	name		simgear
 %define	oname		SimGear
-%define	version		0.3.10
-%define	release		%mkrel 3
+%define	version		1.0.0
+%define	release		%mkrel 1
 %define	lib_name_orig	lib%{name}
 %define	lib_major	0
 %define	lib_name	%mklibname %{name} %{lib_major}
@@ -14,7 +14,7 @@ Release:	%{release}
 URL:		http://www.simgear.org/
 License:	LGPL
 Group:		System/Libraries
-Source:		ftp://ftp.simgear.org/pub/simgear/Source/%{oname}-%{version}.tar.bz2
+Source:		ftp://ftp.simgear.org/pub/simgear/Source/%{oname}-%{version}.tar.gz
 Patch0:		SimGear-0.3.10-fix-x86_64.patch.bz2
 BuildRequires:	autoconf2.5 
 BuildRequires:  plib 
@@ -22,6 +22,7 @@ BuildRequires:  Mesa-common-devel
 BuildRequires:  zlib-devel 
 BuildRequires:  openal-devel
 BuildRequires:  jpeg-devel
+BuildRequires:	libfreealut-devel
 # Author: Curtis Olson <curt@flightgear.org>
 
 %description
