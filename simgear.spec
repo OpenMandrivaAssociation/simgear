@@ -14,6 +14,7 @@ Release:	%{release}
 URL:		http://www.simgear.org/
 License:	LGPL
 Group:		System/Libraries
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source:		ftp://ftp.simgear.org/pub/simgear/Source/%{oname}-%{version}.tar.gz
 Patch0:		SimGear-0.3.10-fix-x86_64.patch.bz2
 BuildRequires:	autoconf2.5 
