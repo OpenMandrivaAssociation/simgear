@@ -57,6 +57,8 @@ Obsoletes:	SimGear-devel
 Obsoletes:	%mklibname %{name} -d 0
 Provides:	%mklibname %{name} -d 0 = %{version}-%{release}
 Provides:	SimGear-devel = %{version}-%{release} 
+Provides:	simgear-devel = %{version}-%{release}
+Provides:	libsimgear-devel = %{version}-%{release}
 
 %description -n	%{lib_name_devel}
 This package contains the headers that programmers will need to develop
