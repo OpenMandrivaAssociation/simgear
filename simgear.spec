@@ -1,7 +1,7 @@
 %define	name		simgear
 %define	oname		SimGear
 %define	version		1.9.1
-%define	release		%mkrel 1
+%define	release		%mkrel 2
 %define	lib_major	%{version}
 %define	lib_name	%mklibname %{name} %{lib_major}
 %define	lib_name_devel	%mklibname %{name} -d
