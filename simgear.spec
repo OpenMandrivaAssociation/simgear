@@ -99,6 +99,11 @@ rm -rf %{buildroot}
 # Don't really need the .la files.
 rm -rf %{buildroot}%{_libdir}/*.la
 
+# These two headers have a useless conditional when they're not internal.
+# This cleans them up.
+cd %{buildroot}%{_includedir}/simgear/
+patch -p0 < %{PATCH102}
+
 %clean
 rm -rf %{buildroot}
 
