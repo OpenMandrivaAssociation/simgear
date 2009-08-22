@@ -16,6 +16,7 @@ Group:		System/Libraries
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source:		ftp://ftp.simgear.org/pub/simgear/Source/%{oname}-%{version}.tar.gz
 Patch0:		SimGear-0.3.10-fix-x86_64.patch.bz2
+Patch1:		SimGear-1.9.1-fix-install.patch
 
 # Fedora patches
 Patch100:		SimGear-1.9.1-shared.patch
@@ -67,6 +68,7 @@ applications which will use %{name}, for example FlightGear.
 %prep
 %setup -q -n %{oname}-%{version}
 %patch0 -p1
+%patch1 -p0
 # automake / autoconf input file changes
 %patch100 -p1
 # Have to disable the tabbed_value_test, because otherwise
