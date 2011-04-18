@@ -1,7 +1,7 @@
 %define	name		simgear
 %define	oname		SimGear
 %define	version		2.0.0
-%define	release		%mkrel 2
+%define	release		%mkrel 3
 %define	lib_major	%{version}
 %define	lib_name	%mklibname %{name} %{lib_major}
 %define	lib_name_devel	%mklibname %{name} -d
@@ -15,7 +15,7 @@ License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source:		ftp://ftp.simgear.org/pub/simgear/Source/%{oname}-%{version}.tar.gz
-Patch0:		SimGear-0.3.10-fix-x86_64.patch.bz2
+Patch0:		SimGear-0.3.10-fix-x86_64.patch
 
 # Fedora patches
 Patch100:		SimGear-2.0.0-shared.patch
@@ -77,7 +77,7 @@ applications which will use %{name}, for example FlightGear.
 %patch104 -p1
 
 %build
-autoreconf -fis
+autoreconf -fi
 # (peroyvind) seems to build now:)
 %configure2_5x --with-jpeg-factory --disable-static
 # Don't use rpath!   
