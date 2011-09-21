@@ -1,6 +1,6 @@
 %define	name		simgear
 %define	version		2.4.0
-%define	release		%mkrel 2
+%define	release		%mkrel 3
 
 Summary:	Basic tools for Simulation
 Name:		%{name}
