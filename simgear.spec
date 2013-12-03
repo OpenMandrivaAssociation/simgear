@@ -18,6 +18,7 @@ BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(openal)
 BuildRequires:	pkgconfig(freealut)
 BuildRequires:	pkgconfig(openscenegraph)
+BuildRequires:	pkgconfig(glu)
 BuildRequires:	boost-devel
 BuildRequires:	jpeg-devel
 BuildRequires:	subversion-devel
