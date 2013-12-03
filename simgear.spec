@@ -3,7 +3,7 @@
 %define debug_package %{nil}
 
 Name:		simgear
-Version:	2.10.0
+Version:	2.12.1
 Release:	1
 Summary:	Basic tools for Simulation
 URL:		http://www.flightgear.org
