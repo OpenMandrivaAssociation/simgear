@@ -3,7 +3,7 @@
 %define debug_package %{nil}
 
 Name:		simgear
-Version:	3.0.0
+Version:	3.2.0
 Release:	1
 Summary:	Basic tools for Simulation
 URL:		http://www.flightgear.org
@@ -51,4 +51,3 @@ applications which will use %{name}, for example FlightGear.
 %doc README COPYING AUTHORS NEWS
 %{_includedir}/simgear/
 %{_libdir}/*.a
-
