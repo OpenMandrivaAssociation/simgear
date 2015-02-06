@@ -1,7 +1,7 @@
 Summary:	Basic tools for Simulation
 Name:		simgear
 Version:	3.2.0
-Release:	2
+Release:	3
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 Url:		http://www.flightgear.org
