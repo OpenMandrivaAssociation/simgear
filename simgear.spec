@@ -1,7 +1,7 @@
 Summary:	Basic tools for Simulation
 Name:		simgear
-Version:	3.2.0
-Release:	3
+Version:	3.4.0
+Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 Url:		http://www.flightgear.org
@@ -78,6 +78,8 @@ applications which will use SimGear, for example FlightGear.
 %setup -q
 
 %build
+export CC=gcc
+export CXX=g++
 %cmake \
 	-DJPEG_FACTORY:BOOL=ON \
 	-DSYSTEM_EXPAT:BOOL=ON \
