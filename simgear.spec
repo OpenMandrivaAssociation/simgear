@@ -6,6 +6,8 @@ License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 Url:		http://www.flightgear.org
 Source:		http://mirrors.ibiblio.org/pub/mirrors/simgear/ftp/Source/%{name}-%{version}.tar.bz2
+# from upstream git, fix build with openscenegraph 3.4
+Patch1:		simgear-3.4.0-osg3.4.patch
 BuildRequires:	cmake
 BuildRequires:	boost-devel
 BuildRequires:	jpeg-devel
@@ -76,6 +78,7 @@ applications which will use SimGear, for example FlightGear.
 
 %prep
 %setup -q
+%apply_patches
 
 %build
 export CC=gcc
