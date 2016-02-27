@@ -1,6 +1,6 @@
 Summary:	Basic tools for Simulation
 Name:		simgear
-Version:	3.4.0
+Version:	2016.1.1
 Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
@@ -69,8 +69,7 @@ applications which will use SimGear, for example FlightGear.
 %{_includedir}/simgear/
 %{_libdir}/libSimGearCore.so
 %{_libdir}/libSimGearScene.so
-%{_datadir}/SimGearCore/SimGearCoreConfig-release.cmake
-%{_datadir}/SimGearCore/SimGearCoreConfig.cmake
+%_prefix/lib/cmake/SimGear
 
 #----------------------------------------------------------------------------
 
