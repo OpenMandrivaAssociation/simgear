@@ -2,14 +2,12 @@
 
 Summary:	Basic tools for Simulation
 Name:		simgear
-Version:	3.4.0
-Release:	3
+Version:	2016.1.1
+Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 Url:		http://www.flightgear.org
 Source:		http://mirrors.ibiblio.org/pub/mirrors/simgear/ftp/Source/%{name}-%{version}.tar.bz2
-# from upstream git, fix build with openscenegraph 3.4
-Patch1:		simgear-3.4.0-osg3.4.patch
 BuildRequires:	cmake
 BuildRequires:	boost-devel
 BuildRequires:	jpeg-devel
@@ -73,8 +71,7 @@ applications which will use SimGear, for example FlightGear.
 %{_includedir}/simgear/
 %{_libdir}/libSimGearCore.so
 %{_libdir}/libSimGearScene.so
-%{_datadir}/SimGearCore/SimGearCoreConfig-release.cmake
-%{_datadir}/SimGearCore/SimGearCoreConfig.cmake
+%_prefix/lib/cmake/SimGear
 
 #----------------------------------------------------------------------------
 
