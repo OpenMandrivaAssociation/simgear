@@ -1,7 +1,2 @@
-removed_sources:
-  simgear-2.12.1.tar.bz2: 79be7aadf9167970021aad9118e688a735839e25
-  simgear-3.0.0.tar.bz2: 3d3f5891cb91c346f2d15cdf976997cc3d5c0ed9
-  simgear-3.2.0.tar.bz2: 6e384a70bafc9145477cdc6b50d746667d52103d
-  simgear-3.4.0.tar.bz2: 3021692be05ca1c983ffa7a4483a74934ec02dbb
 sources:
-  simgear-2016.1.1.tar.bz2: 12dc9dc01461940c8282f4772e2e8b6b56668b2c
+  simgear-2016.2.1.tar.bz2: 9b8f9e4104329e6bd37467483bb7a064a495cd76

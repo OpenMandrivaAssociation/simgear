@@ -2,7 +2,7 @@
 
 Summary:	Basic tools for Simulation
 Name:		simgear
-Version:	2016.1.1
+Version:	2016.2.1
 Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
