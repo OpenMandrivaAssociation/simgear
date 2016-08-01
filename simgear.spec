@@ -19,6 +19,7 @@ BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(openal)
 BuildRequires:	pkgconfig(openscenegraph)
 BuildRequires:	pkgconfig(zlib)
+BuildRequires:	pkgconfig(libcurl)
 
 %description
 All the basic routines required for the flight simulator as well as for
