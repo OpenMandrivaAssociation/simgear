@@ -2,14 +2,12 @@
 
 Summary:	Basic tools for Simulation
 Name:		simgear
-Version:	2017.2.1
+Version:	2018.2.2
 Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 Url:		http://www.flightgear.org
-Source:		https://sourceforge.net/projects/flightgear/files/release-2017.2/%{name}-%{version}.tar.bz2
-BuildRequires:	task-c-devel
-BuildRequires:	task-c++-devel
+Source:		https://sourceforge.net/projects/flightgear/files/release-2018.2/%{name}-%{version}.tar.bz2
 BuildRequires:	cmake
 BuildRequires:	boost-devel
 BuildRequires:	jpeg-devel
