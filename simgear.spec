@@ -14,6 +14,7 @@ BuildRequires:	jpeg-devel
 BuildRequires:	plib-devel
 BuildRequires:	subversion-devel
 BuildRequires:	pkgconfig(freealut)
+BuildRequires:	pkgconfig(egl)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(openal)
