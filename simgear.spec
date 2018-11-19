@@ -18,7 +18,7 @@ BuildRequires:	pkgconfig(egl)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(openal)
-BuildRequires:	pkgconfig(openscenegraph)
+BuildRequires:	pkgconfig(openscenegraph) < 3.5
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(libcurl)
 
