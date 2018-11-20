@@ -3,7 +3,7 @@
 Summary:	Basic tools for Simulation
 Name:		simgear
 Version:	2018.2.2
-Release:	1
+Release:	2
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 Url:		http://www.flightgear.org
@@ -13,11 +13,13 @@ BuildRequires:	boost-devel
 BuildRequires:	jpeg-devel
 BuildRequires:	plib-devel
 BuildRequires:	subversion-devel
+BuildRequires:	pkgconfig(expat)
 BuildRequires:	pkgconfig(freealut)
+BuildRequires:	pkgconfig(egl)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(openal)
-BuildRequires:	pkgconfig(openscenegraph)
+BuildRequires:	pkgconfig(openscenegraph) < 3.5
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(libcurl)
 
