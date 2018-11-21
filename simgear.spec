@@ -12,7 +12,6 @@ BuildRequires:	cmake
 BuildRequires:	boost-devel
 BuildRequires:	jpeg-devel
 BuildRequires:	plib-devel
-BuildRequires:	subversion-devel
 BuildRequires:	pkgconfig(expat)
 BuildRequires:	pkgconfig(freealut)
 BuildRequires:	pkgconfig(egl)
