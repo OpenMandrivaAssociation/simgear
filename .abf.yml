@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   simgear-2018.2.2.tar.bz2: ba24275236aa461c4b0fee3e37e4fb6877734a1c
+sources:
+  simgear-2018.3.1.tar.bz2: f9dab04df2a59642113e4f539ae6c65548f57596
