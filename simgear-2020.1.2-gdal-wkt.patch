@@ -1,0 +1,11 @@
+--- simgear-2020.1.2/simgear/scene/dem/SGDemTile_gdal.cxx.orig	2020-05-27 23:53:24.800697108 +0000
++++ simgear-2020.1.2/simgear/scene/dem/SGDemTile_gdal.cxx	2020-05-27 23:53:46.591130229 +0000
+@@ -172,7 +172,7 @@
+                      && (pszMethod == NULL || EQUALN(pszMethod,"GCP_",4)) ) {
+                 pszThisSourceSRS = GDALGetGCPProjection( hSrcDS );
+             } else if( pszMethod != NULL && EQUAL(pszMethod,"RPC") ) {
+-                pszThisSourceSRS = SRS_WKT_WGS84;
++                pszThisSourceSRS = SRS_DN_WGS84;
+             } else {
+                 pszThisSourceSRS = "";
+             }
