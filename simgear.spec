@@ -92,14 +92,13 @@ find . -name \*.h -exec chmod 0644 '{}' \;
 find . -name \*.c -exec chmod 0644 '{}' \;
 
 %build
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 %cmake \
+	-DCMAKE_BUILD_TYPE=Release \
 	-DJPEG_FACTORY:BOOL=ON \
 	-DSYSTEM_EXPAT:BOOL=ON \
-	-DSIMGEAR_SHARED:BOOL=ON \
-	-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="%{optflags} -DBOOST_NO_STDLIB_CONFIG" \
-	-DCMAKE_C_FLAGS_RELWITHDEBINFO="%{optflags} -DBOOST_NO_STDLIB_CONFIG"
+	-DSIMGEAR_SHARED:BOOL=ON
 %make_build
 
 %install
