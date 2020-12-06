@@ -1,0 +1,20 @@
+diff -up simgear-2.6.0/simgear/scene/model/SGText.cxx.checkforn simgear-2.6.0/simgear/scene/model/SGText.cxx
+--- simgear-2.6.0/simgear/scene/model/SGText.cxx.checkforn	2012-02-17 17:38:44.563895660 -0500
++++ simgear-2.6.0/simgear/scene/model/SGText.cxx	2012-05-29 20:31:35.347601886 -0400
+@@ -65,6 +65,16 @@ void SGText::UpdateCallback::operator()(
+   // FIXME:
+   // hopefully the users never specifies bad formats here
+   // this should better be something more robust
++  // It is never safe for format.c_str to be %n.
++  string unsafe ("%n");
++  size_t found;
++
++  found=format.find(unsafe);
++  if (found!=string::npos) {
++     SG_LOG(SG_GENERAL, SG_ALERT, "format type contained %n, but this is unsafe, reverting to %s");
++     format = "%s";
++  }
++
+   char buf[256];
+   if( numeric ) {
+     double d = property->getDoubleValue() * scale + offset;
