@@ -7,7 +7,7 @@ Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 Url:		http://www.flightgear.org
-Source:		https://sourceforge.net/projects/flightgear/files/release-2018.2/%{name}-%{version}.tar.bz2
+Source:		https://sourceforge.net/projects/flightgear/files/release-2020.3/%{name}-%{version}.tar.bz2
 BuildRequires:	cmake
 BuildRequires:	boost-devel
 BuildRequires:	jpeg-devel
@@ -21,6 +21,10 @@ BuildRequires:	pkgconfig(openal)
 BuildRequires:	pkgconfig(openscenegraph) < 3.5
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(libcurl)
+BuildRequires:	libgomp-devel
+BuildRequires:	udns-devel
+BuildRequires:	pkgconfig(gdal)
+BuildRequires:	pkgconfig(openthreads)
 
 %description
 All the basic routines required for the flight simulator as well as for
