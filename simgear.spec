@@ -2,8 +2,8 @@
 
 Summary:	Basic tools for Simulation
 Name:		simgear
-Version:	2018.2.2
-Release:	2
+Version:	2020.3.4
+Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 Url:		http://www.flightgear.org
@@ -91,7 +91,7 @@ export CXX=g++
 	-DJPEG_FACTORY:BOOL=ON \
 	-DSYSTEM_EXPAT:BOOL=ON \
 	-DSIMGEAR_SHARED:BOOL=ON
-%make
+%make_build
 
 %install
-%makeinstall_std -C build
+%make_install -C build
