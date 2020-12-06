@@ -10,6 +10,7 @@ Url:		http://www.flightgear.org
 Source:		https://sourceforge.net/projects/flightgear/files/release-2020.3/%{name}-%{version}.tar.bz2
 Patch0000:	simgear-2.6.0-fedora-check-for-%n-in-format-string.patch
 Patch2:		simgear-2020.1.2-gdal-wkt.patch
+Patch3:		fix-config-h-not-found.patch
 
 BuildRequires:	cmake
 BuildRequires:	boost-devel
