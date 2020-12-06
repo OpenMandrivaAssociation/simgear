@@ -95,6 +95,7 @@ find . -name \*.c -exec chmod 0644 '{}' \;
 #export CC=gcc
 #export CXX=g++
 %cmake \
+	-DCMAKE_CXX_FLAGS="-fpermissive" \
 	-DCMAKE_BUILD_TYPE=Release \
 	-DJPEG_FACTORY:BOOL=ON \
 	-DSYSTEM_EXPAT:BOOL=ON \
