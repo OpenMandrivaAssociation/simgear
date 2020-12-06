@@ -88,8 +88,8 @@ applications which will use SimGear, for example FlightGear.
 %setup -q
 %autopatch -p1
 # fix spurious-executable-perm
-find . -name \*.h -exec chmod 0644 '{}' \;
-find . -name \*.c -exec chmod 0644 '{}' \;
+#find . -name \*.h -exec chmod 0644 '{}' \;
+#find . -name \*.c -exec chmod 0644 '{}' \;
 
 %build
 #export CC=gcc
