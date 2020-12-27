@@ -14,6 +14,7 @@ Patch2:		simgear-2020.1.2-gdal-wkt.patch
 Patch3:		fix-config-h-not-found.patch
 
 BuildRequires:	cmake
+BuildRequires:	ninja
 BuildRequires:	boost-devel
 BuildRequires:	jpeg-devel
 BuildRequires:	plib-devel
@@ -87,22 +88,17 @@ applications which will use SimGear, for example FlightGear.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
-%autopatch -p1
-# fix spurious-executable-perm
-#find . -name \*.h -exec chmod 0644 '{}' \;
-#find . -name \*.c -exec chmod 0644 '{}' \;
-
-%build
-#export CC=gcc
-#export CXX=g++
+%autosetup -p1
 %cmake \
+	-G Ninja \
 	-DCMAKE_CXX_FLAGS="-fpermissive" \
 	-DCMAKE_BUILD_TYPE=Release \
 	-DJPEG_FACTORY:BOOL=ON \
 	-DSYSTEM_EXPAT:BOOL=ON \
 	-DSIMGEAR_SHARED:BOOL=ON
-%make_build
+
+%build
+%ninja_build -C build
 
 %install
-%make_install -C build
+%ninja_install -C build
