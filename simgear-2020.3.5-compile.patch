@@ -1,0 +1,47 @@
+diff -up simgear-2020.3.5/CMakeLists.txt.omv~ simgear-2020.3.5/CMakeLists.txt
+--- simgear-2020.3.5/CMakeLists.txt.omv~	2020-12-27 19:48:10.457442273 +0100
++++ simgear-2020.3.5/CMakeLists.txt	2020-12-27 19:48:41.360919204 +0100
+@@ -452,15 +452,15 @@ if (CLANG)
+     # Boost redeclares class members
+     set(WARNING_FLAGS_CXX "-Wall -fPIC -Wno-overloaded-virtual -Wno-redeclared-class-member")
+     set(WARNING_FLAGS_C   "-Wall -fPIC")
+-    set(CMAKE_XCODE_ATTRIBUTE_CLANG_CXX_LIBRARY "libc++")
++    #set(CMAKE_XCODE_ATTRIBUTE_CLANG_CXX_LIBRARY "libc++")
+     # fix Boost compilation :(
+-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
++    #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
+ 
+     # override CMake default RelWithDebInfo flags.
+-    set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O3 -g -DNDEBUG")
+-    set(CMAKE_C_FLAGS_RELWITHDEBINFO  "-O3 -g -DNDEBUG")
++    #set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O3 -g -DNDEBUG")
++    #set(CMAKE_C_FLAGS_RELWITHDEBINFO  "-O3 -g -DNDEBUG")
+ 
+-    set(SIMD_COMPILER_FLAGS "-msse2 -mfpmath=sse -ftree-vectorize -ftree-slp-vectorize")
++    #set(SIMD_COMPILER_FLAGS "-msse2 -mfpmath=sse -ftree-vectorize -ftree-slp-vectorize")
+ endif()
+ 
+ if (ENABLE_OPENMP)
+diff -up simgear-2020.3.5/simgear/CMakeLists.txt.omv~ simgear-2020.3.5/simgear/CMakeLists.txt
+--- simgear-2020.3.5/simgear/CMakeLists.txt.omv~	2020-12-27 20:45:35.509488764 +0100
++++ simgear-2020.3.5/simgear/CMakeLists.txt	2020-12-27 20:46:02.805775646 +0100
+@@ -190,7 +190,7 @@ if(NOT SIMGEAR_HEADLESS)
+         ${ZLIB_LIBRARY}
+         ${OPENAL_LIBRARY}
+         ${OPENGL_LIBRARY}
+-        ${JPEG_LIBRARY})
++        ${JPEG_LIBRARY} pthread)
+ 
+     if(ENABLE_GDAL)
+         target_link_libraries(SimGearScene PRIVATE ${GDAL_LIBRARIES})
+diff -up simgear-2020.3.5/simgear/props/props.cxx.omv~ simgear-2020.3.5/simgear/props/props.cxx
+--- simgear-2020.3.5/simgear/props/props.cxx.omv~	2020-12-27 19:54:57.610564108 +0100
++++ simgear-2020.3.5/simgear/props/props.cxx	2020-12-27 19:55:10.929759771 +0100
+@@ -34,6 +34,7 @@ using std::cerr;
+ # include <boost/algorithm/string/predicate.hpp>
+ # include <boost/functional/hash.hpp>
+ # include <boost/range.hpp>
++# include <boost/range/result_iterator.hpp>
+ 
+ # include <simgear/compiler.h>
+ # include <simgear/debug/logstream.hxx>
