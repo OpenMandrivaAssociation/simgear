@@ -27,6 +27,7 @@ BuildRequires:	pkgconfig(openal)
 BuildRequires:	pkgconfig(openscenegraph)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(libcurl)
+BuildRequires:	pkgconfig(liblzma)
 BuildRequires:	libgomp-devel
 BuildRequires:	udns-devel
 BuildRequires:	pkgconfig(gdal)
