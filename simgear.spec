@@ -1,8 +1,9 @@
 %define _disable_lto 1
+%define _disable_ld_no_undefined 1
 
 Summary:	Basic tools for Simulation
 Name:		simgear
-Version:	2020.3.13
+Version:	2020.3.15
 Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
@@ -24,6 +25,7 @@ BuildRequires:	pkgconfig(egl)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(openal)
+BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(openscenegraph)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(libcurl)
