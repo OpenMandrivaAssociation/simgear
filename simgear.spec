@@ -3,7 +3,7 @@
 
 Summary:	Basic tools for Simulation
 Name:		simgear
-Version:	2020.3.15
+Version:	2020.3.17
 Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
@@ -32,7 +32,7 @@ BuildRequires:	pkgconfig(libcurl)
 BuildRequires:	pkgconfig(liblzma)
 BuildRequires:	libgomp-devel
 BuildRequires:	udns-devel
-BuildRequires:	pkgconfig(gdal)
+#BuildRequires:	pkgconfig(gdal)
 BuildRequires:	pkgconfig(openthreads)
 
 %description
