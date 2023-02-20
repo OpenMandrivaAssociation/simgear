@@ -45,3 +45,13 @@ diff -up simgear-2020.3.5/simgear/props/props.cxx.omv~ simgear-2020.3.5/simgear/
  
  # include <simgear/compiler.h>
  # include <simgear/debug/logstream.hxx>
+--- simgear-2020.3.17/simgear/scene/viewer/Compositor.hxx
++++ simgear-2020.3.17/simgear/scene/viewer/Compositor.hxx
+@@ -22,6 +22,7 @@
+ 
+ // For osgUtil::LineSegmentIntersector::Intersections, which is a typedef.
+ #include <osgUtil/LineSegmentIntersector>
++#include <osg/Uniform>
+ 
+ #include "CompositorBuffer.hxx"
+ #include "CompositorPass.hxx"
