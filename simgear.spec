@@ -3,7 +3,7 @@
 
 Summary:	Basic tools for Simulation
 Name:		simgear
-Version:	2020.3.17
+Version:	2020.3.18
 Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
@@ -13,6 +13,7 @@ Patch0000:	simgear-2.6.0-fedora-check-for-%n-in-format-string.patch
 Patch1:		simgear-2020.3.5-compile.patch
 Patch2:		simgear-2020.1.2-gdal-wkt.patch
 Patch3:		fix-config-h-not-found.patch
+Patch4:		simgear-2020.3.18-clang16.patch
 
 BuildRequires:	cmake
 BuildRequires:	ninja
@@ -92,13 +93,16 @@ applications which will use SimGear, for example FlightGear.
 
 %prep
 %autosetup -p1
+# FIXME ENABLE_TESTS=OFF is needed because as of 2020.3.18, 
+# the strutils tests fail to build with clang 16 and gcc 13.
 %cmake \
 	-G Ninja \
 	-DCMAKE_CXX_FLAGS="-fpermissive" \
 	-DCMAKE_BUILD_TYPE=Release \
 	-DJPEG_FACTORY:BOOL=ON \
 	-DSYSTEM_EXPAT:BOOL=ON \
-	-DSIMGEAR_SHARED:BOOL=ON
+	-DSIMGEAR_SHARED:BOOL=ON \
+	-DENABLE_TESTS:BOOL=OFF
 
 %build
 %ninja_build -C build

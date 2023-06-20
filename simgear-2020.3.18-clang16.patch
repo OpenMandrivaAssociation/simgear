@@ -1,0 +1,14 @@
+diff -up simgear-2020.3.18/CMakeLists.txt.omv~ simgear-2020.3.18/CMakeLists.txt
+--- simgear-2020.3.18/CMakeLists.txt.omv~	2023-06-20 03:14:28.259454860 +0200
++++ simgear-2020.3.18/CMakeLists.txt	2023-06-20 03:16:35.038931454 +0200
+@@ -47,7 +47,8 @@ set(CMAKE_OSX_DEPLOYMENT_TARGET "10.9" C
+ 
+ # let's use & require C++11 - note these are only functional with CMake 3.1
+ # we do manual fallbacks for CMake 3.0 in the compilers section
+-set(CMAKE_CXX_STANDARD 11)
++# We actually need 17 or higher, or run into a build failure with clang 16.
++set(CMAKE_CXX_STANDARD 20)
+ set(CMAKE_CXX_STANDARD_REQUIRED YES)
+ 
+ # read 'version' file into a variable (stripping any newlines or spaces)
+diff -up simgear-2020.3.18/simgear/std/integer_sequence.hxx.omv~ simgear-2020.3.18/simgear/std/integer_sequence.hxx
