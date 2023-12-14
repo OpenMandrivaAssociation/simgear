@@ -3,7 +3,7 @@
 
 Summary:	Basic tools for Simulation
 Name:		simgear
-Version:	2020.3.18
+Version:	2020.3.19
 Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
