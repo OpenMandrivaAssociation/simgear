@@ -3,17 +3,15 @@
 
 Summary:	Basic tools for Simulation
 Name:		simgear
-Version:	2020.3.19
+Version:	2024.1.5
 Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 Url:		https://www.flightgear.org
-Source:		https://sourceforge.net/projects/flightgear/files/release-2020.3/%{name}-%{version}.tar.bz2
+Source:		https://gitlab.com/flightgear/fgmeta/-/jobs/13598873657/artifacts/raw/sgbuild/simgear-%{version}.tar.bz2
 Patch0000:	simgear-2.6.0-fedora-check-for-%n-in-format-string.patch
 Patch1:		simgear-2020.3.5-compile.patch
-Patch2:		simgear-2020.1.2-gdal-wkt.patch
 Patch3:		fix-config-h-not-found.patch
-Patch4:		simgear-2020.3.18-clang16.patch
 
 BuildRequires:	cmake
 BuildRequires:	ninja
